@@ -4,10 +4,6 @@ export interface iAction<T> {
     payload: T;
 }
 
-export interface iDispatch<T> {
-    (dispatch:any):T
-}
-
-export interface iDispatcher<T> {
-
+export interface iDispatch {
+    (dispatch: any): void
 }

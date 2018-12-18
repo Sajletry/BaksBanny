@@ -1,9 +1,9 @@
 import * as constants from './constants';
-import { iAction, iDispatch } from "../../store/interfaces";
+import { iDispatch } from "../../store/interfaces";
 
-export function dispatchTestAction( testValue: boolean ) {
-    return ( dispatch:any ) => {
-         dispatch( {
+export function dispatchTestAction( testValue: boolean ):iDispatch {
+    return  dispatch=> {
+        dispatch( {
             type: constants.CHANGE_TEST,
             payload: testValue
         } );

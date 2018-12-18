@@ -1,7 +1,11 @@
 import * as constants from './constants';
-import { iDispatch } from "../../store/interfaces";
+import { IAction , IDispatch } from "../../store/interfaces";
 
-export function dispatchTestAction( testValue: boolean ):iDispatch {
+export interface ITestAction extends IAction<boolean>{
+    payload: boolean;
+}
+
+export function dispatchTestAction( testValue: boolean ):IDispatch {
     return  dispatch=> {
         dispatch( {
             type: constants.CHANGE_TEST,
@@ -9,3 +13,5 @@ export function dispatchTestAction( testValue: boolean ):iDispatch {
         } );
     }
 }
+
+export type IAction  =  ITestAction;

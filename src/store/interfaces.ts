@@ -1,9 +1,7 @@
 
-export interface iAction<T> {
+export interface IAction<T> {
     type: string;
     payload: T;
 }
 
-export interface iDispatch {
-    (dispatch: any): void
-}
+export type IDispatch = (dispatch: any) => void;

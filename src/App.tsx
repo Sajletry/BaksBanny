@@ -1,15 +1,20 @@
 import * as React from 'react';
-// import { Test } from './features/testFeature/Test';
 import { Provider } from "react-redux";
 import { store } from "./store";
+import Test from "./features/testFeature/Test";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends React.Component {
     public render() {
         return (
-            <Provider store={store}>
-                <div> hi</div>
-            </Provider>
+            <div>
+                <Provider store={store}>
+                    <Router>
+                        <Route path="/" component={Test}/>
+                    </Router>
+                </Provider>
+            </div>
         );
     }
 }

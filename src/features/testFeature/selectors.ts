@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
-import { ITestReducerState } from "./reducer";
+import { ITestReducerState } from "./interface";
 import { IState } from "../../store/combinedReducer";
 
 
-const getTest = ( state: IState ): ITestReducerState => state.test;
+const getTest = ( state: IState ): ITestReducerState => state.TestFeature;
 
-export const getTestValue = createSelector( getTest, test => test.test );
+export const getTestValue = createSelector( getTest, TestFeature => TestFeature.test );

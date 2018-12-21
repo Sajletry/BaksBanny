@@ -3,4 +3,4 @@ export interface IAction<T> {
     payload: T;
 }
 
-export type IDispatch = (dispatch: any) => void;
+export type IDispatch<T> = (action: any) => void;

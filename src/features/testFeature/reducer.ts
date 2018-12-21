@@ -6,7 +6,7 @@ export interface ITestReducerState {
 }
 
 const initialState: ITestReducerState = {
-    test: false
+    test: false,
 };
 
 export function testReducer( state: ITestReducerState = initialState, action: IAction): ITestReducerState {

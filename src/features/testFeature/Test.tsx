@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import * as actions from './actions';
+import * as selectors from './selectors';
 
 interface IProps {
-    test: boolean;
+    testValue: boolean;
     testAction: any
 }
 
@@ -15,6 +16,7 @@ class Test extends React.Component<IProps> {
     }
 
     public onClickEvent() {
+        console.log(this.props.testValue);
         this.props.testAction( true );
     }
 
@@ -29,7 +31,7 @@ class Test extends React.Component<IProps> {
 };
 
 const mapStateToProps = ( state: any ) => ( {
-    test: state.test
+    testValue: selectors.getTestValue( state )
 } );
 
 const mapDispatchToProps = ( dispatch: any ) => ( {

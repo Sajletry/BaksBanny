@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux'
-import {testReducer} from "../features/testFeature/reducer";
+import {testReducer, ITestReducerState } from "../features/testFeature/reducer";
 
-export const rootReducer = combineReducers({
+export interface IState {
+    test:ITestReducerState;
+};
+
+export const rootReducer  = combineReducers({
     test: testReducer
 });
